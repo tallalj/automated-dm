@@ -19,6 +19,7 @@ dataset="";
 def get_File(self):
  Data=GetData()
  global dataset
+ print("HELLO")
  dataset=Data.get_File(window)
 
 def start_analize(self):
