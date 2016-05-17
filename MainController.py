@@ -15,12 +15,12 @@ from Outlier import Outlier
 
 dataset="";
 
-
 def get_File(self):
  Data=GetData()
  global dataset
  print("HELLO")
  dataset=Data.get_File(window)
+ print(dataset)
 
 def start_analize(self):
  global dataset
