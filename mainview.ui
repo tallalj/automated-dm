@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1108</width>
-    <height>949</height>
+    <width>1345</width>
+    <height>756</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -114,10 +114,10 @@ p, li { white-space: pre-wrap; }
    <widget class="QFrame" name="frame_2">
     <property name="geometry">
      <rect>
-      <x>650</x>
-      <y>20</y>
-      <width>451</width>
-      <height>491</height>
+      <x>640</x>
+      <y>500</y>
+      <width>701</width>
+      <height>131</height>
      </rect>
     </property>
     <property name="frameShape">
@@ -131,18 +131,18 @@ p, li { white-space: pre-wrap; }
       <rect>
        <x>10</x>
        <y>10</y>
-       <width>221</width>
-       <height>211</height>
+       <width>511</width>
+       <height>111</height>
       </rect>
      </property>
     </widget>
     <widget class="QTextEdit" name="Detail">
      <property name="geometry">
       <rect>
-       <x>250</x>
+       <x>530</x>
        <y>10</y>
-       <width>191</width>
-       <height>211</height>
+       <width>161</width>
+       <height>111</height>
       </rect>
      </property>
     </widget>
@@ -150,10 +150,10 @@ p, li { white-space: pre-wrap; }
    <widget class="QFrame" name="plot">
     <property name="geometry">
      <rect>
-      <x>20</x>
-      <y>290</y>
-      <width>531</width>
-      <height>281</height>
+      <x>640</x>
+      <y>10</y>
+      <width>701</width>
+      <height>481</height>
      </rect>
     </property>
     <property name="frameShape">
@@ -169,7 +169,7 @@ p, li { white-space: pre-wrap; }
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>1108</width>
+     <width>1345</width>
      <height>21</height>
     </rect>
    </property>
@@ -186,7 +186,22 @@ p, li { white-space: pre-wrap; }
     </property>
     <addaction name="actionAbout_help"/>
    </widget>
+   <widget class="QMenu" name="menuTools">
+    <property name="title">
+     <string>Tools</string>
+    </property>
+    <widget class="QMenu" name="menuExport_Data">
+     <property name="title">
+      <string>Export Data</string>
+     </property>
+     <addaction name="actionJSon"/>
+     <addaction name="actionXML"/>
+     <addaction name="actionCSV"/>
+    </widget>
+    <addaction name="menuExport_Data"/>
+   </widget>
    <addaction name="menuFile"/>
+   <addaction name="menuTools"/>
    <addaction name="menuHelp"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
@@ -203,6 +218,21 @@ p, li { white-space: pre-wrap; }
   <action name="actionAbout_help">
    <property name="text">
     <string>About help</string>
+   </property>
+  </action>
+  <action name="actionJSon">
+   <property name="text">
+    <string>JSon</string>
+   </property>
+  </action>
+  <action name="actionXML">
+   <property name="text">
+    <string>XML</string>
+   </property>
+  </action>
+  <action name="actionCSV">
+   <property name="text">
+    <string>CSV</string>
    </property>
   </action>
  </widget>

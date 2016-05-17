@@ -8,7 +8,7 @@ import copy
 import math
 import random
 import matplotlib.pyplot as plt
-
+from matplotlib.backends.backend_qt4agg import FigureCanvasQTAgg as FigureCanvas
 class AndlizeData:
  def start(self,dataset,window):
   window.ColDetail.setRowCount(len(dataset.columns));
@@ -22,7 +22,15 @@ class AndlizeData:
    Col5_var=len(cell.unique())
    if Col3_type!='object':
     plt.boxplot(cell)
+
+
     figure=plt.figure()
+    canv = FigureCanvas(figure)
+    hBoxLayout	 = QHBoxLayout()
+    hBoxLayout.setGeometry(QRect(100, 100, 100, 100))
+    hBoxLayout.addWidget(canv)
+
+    window.plot.setLayout(hBoxLayout)
     print("************************")
     print(type(figure))
 
