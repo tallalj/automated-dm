@@ -30,7 +30,7 @@ class loaddata:
         print(filename + " " + file_extension)
         if file_extension == ".csv":
             return self.read_csv_or_text(path)
-        if file_extension == ".xls":
+        if file_extension == ".xls" or file_extension == ".xlsx":
             return self.reading_excel_xls(path)
         return
 
@@ -41,7 +41,7 @@ class loaddata:
     def reading_excel_xls(self,path):
         import xlrd
         workbook = xlrd.open_workbook(path)
-        worksheet = workbook.sheet_by_name('titanic3')   #hardcoded
+        worksheet = workbook.sheet_by_index(0)  # 1st sheet value
         #a = worksheet.cell(2,9).value value for specifi field
         data = [[worksheet.cell_value(r,c) for c in range (worksheet.ncols)] for r in range(worksheet.nrows)]
         data = pd.DataFrame(data)        
