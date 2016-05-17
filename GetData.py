@@ -11,15 +11,15 @@ import matplotlib.pyplot as plt
 
 from DataManager.loaddata import loaddata
 
-dataset="";
-
 class GetData(QtGui.QFileDialog):
- def get_File(self,window):
-  """Gets the path of the file selected via file picker"""
-  DataSetPath = self.getOpenFileName(self,'Open file','c:\\',"dataFile (*.*)")
-  window.DataPath.setText(DataSetPath)
-  #RowData=pd.read_csv(DataSetPath,low_memory=False)
-  ld = loaddata()
-  RowData = ld.read_file_at_path(DataSetPath)
-  print(len(RowData.columns))
-  return RowData
+    filePath = ""
+    def get_File(self,window):
+        """Gets the path of the file selected via file picker"""
+        DataSetPath = self.getOpenFileName(self,'Open file','c:\\',"dataFile (*.*)")
+        GetData.filePath = DataSetPath
+        window.DataPath.setText(DataSetPath)
+        #RowData=pd.read_csv(DataSetPath,low_memory=False)
+        ld = loaddata()
+        RowData = ld.read_file_at_path(DataSetPath)
+        print("read the file")
+        return RowData

@@ -19,4 +19,3 @@ class Outlier:
    print("---------------------------------")
    print(len(cell))
   return
-

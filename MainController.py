@@ -16,22 +16,24 @@ from Outlier import Outlier
 dataset="";
 
 def get_File(self):
- Data=GetData()
- global dataset
- print("HELLO")
- dataset=Data.get_File(window)
- print(dataset)
+    Data=GetData()
+    global dataset
+    dataset=Data.get_File(window)
 
 def start_analize(self):
- global dataset
- global window
- global Obj_analize
- global outliers_processor
- Obj_analize.start(dataset,window)
- outliers_processor.start(dataset,window)
+    global dataset
+    global window
+    global Obj_analize
+    global outliers_processor
+    Obj_analize.start(dataset,window)
+    outliers_processor.start(dataset,window)
 
 def clear_table(self):
-  return
+    return
+
+def exportButtonPressed(self):
+    print(GetData.filePath)
+    QMessageBox.warning(window, "Sorry", "Pay to play :D ?")
 
 app = QtGui.QApplication(sys.argv)
 window = uic.loadUi("mainview.ui")
@@ -42,4 +44,5 @@ outliers_processor=Outlier()
 window.Datapathbutton.clicked.connect(get_File)
 window.analize.clicked.connect(start_analize)
 window.clear.clicked.connect(clear_table)
+window.exportButton.clicked.connect(exportButtonPressed)
 sys.exit(app.exec_())

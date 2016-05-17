@@ -2,9 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8cfad21f-b2c1-4d80-8483-4f905d39a88b" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/PreProcessing/visualizer.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mainview.ui" afterPath="$PROJECT_DIR$/mainview.ui" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DataManager/loaddata.py" afterPath="$PROJECT_DIR$/DataManager/loaddata.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AndlizeData.py" afterPath="$PROJECT_DIR$/AndlizeData.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DataManager/savedata.py" afterPath="$PROJECT_DIR$/DataManager/savedata.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/GetData.py" afterPath="$PROJECT_DIR$/GetData.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MainController.py" afterPath="$PROJECT_DIR$/MainController.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Outlier.py" afterPath="$PROJECT_DIR$/Outlier.py" />
     </list>
     <ignored path="automated-dm.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -25,11 +29,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="MainController.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="MainController.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/MainController.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="384">
-              <caret line="45" column="0" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
+            <state relative-caret-position="313">
+              <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
               <folding>
                 <element signature="e#0#10#0" expanded="true" />
               </folding>
@@ -37,11 +41,45 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="loaddata.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="savedata.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/DataManager/savedata.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="272">
+              <caret line="16" column="31" selection-start-line="16" selection-start-column="31" selection-end-line="16" selection-end-column="31" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AndlizeData.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/AndlizeData.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-228">
+              <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+              <folding>
+                <element signature="e#0#10#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Outlier.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Outlier.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="340">
+              <caret line="20" column="8" selection-start-line="20" selection-start-column="8" selection-end-line="20" selection-end-column="8" />
+              <folding>
+                <element signature="e#0#10#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="loaddata.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/DataManager/loaddata.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="401">
-              <caret line="50" column="23" selection-start-line="50" selection-start-column="23" selection-end-line="50" selection-end-column="23" />
+            <state relative-caret-position="10">
+              <caret line="27" column="8" selection-start-line="27" selection-start-column="8" selection-end-line="27" selection-end-column="8" />
               <folding />
             </state>
           </provider>
@@ -50,21 +88,11 @@
       <file leaf-file-name="GetData.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/GetData.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+            <state relative-caret-position="408">
+              <caret line="24" column="21" selection-start-line="24" selection-start-column="21" selection-end-line="24" selection-end-column="21" />
               <folding>
                 <element signature="e#0#10#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="sanitizor.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/PreProcessing/sanitizor.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="17" column="50" selection-start-line="17" selection-start-column="50" selection-end-line="17" selection-end-column="50" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -82,8 +110,8 @@
       <file leaf-file-name="Reading_class.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Reading_class.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="265">
-              <caret line="35" column="63" selection-start-line="35" selection-start-column="8" selection-end-line="35" selection-end-column="63" />
+            <state relative-caret-position="299">
+              <caret line="90" column="31" selection-start-line="78" selection-start-column="4" selection-end-line="90" selection-end-column="31" />
               <folding>
                 <element signature="e#165#178#0" expanded="true" />
               </folding>
@@ -107,11 +135,14 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/Reading_class.py" />
-        <option value="$PROJECT_DIR$/GetData.py" />
         <option value="$PROJECT_DIR$/PreProcessing/test.py" />
-        <option value="$PROJECT_DIR$/PreProcessing/visualizer.py" />
-        <option value="$PROJECT_DIR$/MainController.py" />
         <option value="$PROJECT_DIR$/DataManager/loaddata.py" />
+        <option value="$PROJECT_DIR$/PreProcessing/visualizer.py" />
+        <option value="$PROJECT_DIR$/Outlier.py" />
+        <option value="$PROJECT_DIR$/AndlizeData.py" />
+        <option value="$PROJECT_DIR$/GetData.py" />
+        <option value="$PROJECT_DIR$/DataManager/savedata.py" />
+        <option value="$PROJECT_DIR$/MainController.py" />
       </list>
     </option>
   </component>
@@ -394,7 +425,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32898173" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32898173" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
@@ -416,13 +447,11 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/GetData.py">
+    <entry file="file://$PROJECT_DIR$/PreProcessing/test.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#10#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -430,14 +459,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
           <caret line="17" column="50" selection-start-line="17" selection-start-column="50" selection-end-line="17" selection-end-column="50" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PreProcessing/test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -450,10 +471,46 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/MainController.py">
+    <entry file="file://$PROJECT_DIR$/mainview.ui.autosave">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="384">
-          <caret line="45" column="0" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
+        <state relative-caret-position="340">
+          <caret line="20" column="15" selection-start-line="20" selection-start-column="15" selection-end-line="20" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Outlier.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" column="8" selection-start-line="20" selection-start-column="8" selection-end-line="20" selection-end-column="8" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AndlizeData.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-228">
+          <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DataManager/loaddata.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="10">
+          <caret line="27" column="8" selection-start-line="27" selection-start-column="8" selection-end-line="27" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/GetData.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="24" column="21" selection-start-line="24" selection-start-column="21" selection-end-line="24" selection-end-column="21" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
           </folding>
@@ -462,19 +519,29 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Reading_class.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="265">
-          <caret line="35" column="63" selection-start-line="35" selection-start-column="8" selection-end-line="35" selection-end-column="63" />
+        <state relative-caret-position="299">
+          <caret line="90" column="31" selection-start-line="78" selection-start-column="4" selection-end-line="90" selection-end-column="31" />
           <folding>
             <element signature="e#165#178#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/DataManager/loaddata.py">
+    <entry file="file://$PROJECT_DIR$/DataManager/savedata.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="401">
-          <caret line="50" column="23" selection-start-line="50" selection-start-column="23" selection-end-line="50" selection-end-column="23" />
+        <state relative-caret-position="272">
+          <caret line="16" column="31" selection-start-line="16" selection-start-column="31" selection-end-line="16" selection-end-column="31" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MainController.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="313">
+          <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

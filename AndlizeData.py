@@ -23,10 +23,10 @@ class AndlizeData:
    if Col3_type!='object':
     plt.boxplot(cell)
 
-
     figure=plt.figure()
     canv = FigureCanvas(figure)
     hBoxLayout	 = QHBoxLayout()
+    hBoxLayout.setObjectName("boxImage")
     hBoxLayout.setGeometry(QRect(100, 100, 100, 100))
     hBoxLayout.addWidget(canv)
 
