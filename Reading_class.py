@@ -85,11 +85,10 @@ class Write_file():
         reader = csv.DictReader( f, fieldnames = ( "fieldname0","fieldname1","fieldname2","fieldname3" ))  
         # Parse the CSV into JSON  
         out = json.dumps( [ row for row in reader ] )  
-        print ("JSON parsed!" ) 
         # Save the JSON  
         f = open(self.output_file, 'w')  
         f.write(out)  
-        
+        return self.output_file
 
 
 obj_write = Write_file()
