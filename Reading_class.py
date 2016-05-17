@@ -23,7 +23,7 @@ import pandas as pd
 class read_file:
     file_path = "D:\\AAA  Studies\\Semester II\\DATA MINING\\Datasets\\output.json"
     data_frame="" 
-    
+    filename, file_extension = os.path.splitext(file_path)
    # def set_name(self, name):
      #   self.__prv_name = name
     def read_csv_or_text(self):
@@ -32,8 +32,8 @@ class read_file:
     def reading_excel_xls(self):
         import xlrd
         workbook = xlrd.open_workbook(self.file_path)
-        worksheet = workbook.sheet_by_name('titanic3')   #hardcoded
-        #a = worksheet.cell(2,9).value value for specifi field
+        #worksheet = workbook.sheet_by_name('titanic3')   #hardcoded
+        worksheet = workbook.sheet_by_index(0) #1st sheet value
         data = [[worksheet.cell_value(r,c) for c in range (worksheet.ncols)] for r in range(worksheet.nrows)]
         data = pd.DataFrame(data)        
         return data
@@ -48,8 +48,7 @@ class read_file:
         
         #from pandas.io.json import json_normalize    to normalized
         return jdata
-    #def tostring(self):
-    #return '{} is {} years old, having wieght {}'.format(self.__prv_name, self.__prv_age, self.__prv_weight)
+
 #def reading_xml(self): 
    # def reading_text(self):
     def read_clipboard(self):
@@ -90,7 +89,7 @@ class Write_file():
         # Save the JSON  
         f = open(self.output_file, 'w')  
         f.write(out)  
-        print ("JSON saved!")
+        
 
 
 obj_write = Write_file()
