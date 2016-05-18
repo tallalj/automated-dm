@@ -48,6 +48,13 @@ def remove_non_numeric(d):
     return dt
 
 
+def is_non_numeric(d):
+    if  d.dtype != np.float32 and d.dtype != np.float64 and d.dtype != np.int64:
+        return False
+    else:
+        return True
+
+
 def reject_outliers1(data):
     m = 2
     u = np.mean(data)
@@ -77,15 +84,46 @@ def get_var(d):
     return c
 
 
+#def get_mean(d):
+#    m = d.mean()
+#    return m
 
-rules = Orange.associate.AssociationRulesSparseInducer(data, support=0.3)
-print "%4s %4s  %s" % ("Supp", "Conf", "Rule")
-for r in rules[:5]:
-    print "%4.1f %4.1f  %s" % (r.support, r.confidence, r)
+#def get_mode(d):
+#    m = d.mode()
+#    return m
+
+#def get_mean(d):
+#    m = d.mean()
+#    return m
+
+
+def get_var(d):
+    c = np.var(data)
+    return c
 
 
 
-df = pd.read_csv("adult.csv",low_memory=False)
+
+def analyze_df(df,window):
+    desc = df.describe()
+    info = df.info()
+    d = remove_non_numeric(df)
+    m = remove_nan_by_mean(d)
+    co = get_cov(m)
+    va = get_var(m)
+    print(co.dtype)
+    
+    
+    
+    
+
+
+df = pd.read_csv("t_1.csv",low_memory=False)
+
+analyze_df(df)
+
+
+print(get_mode(df))
 
 d2 = df
 
