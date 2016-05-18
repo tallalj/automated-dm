@@ -18,7 +18,7 @@ import pandas as pd
 class loaddata:
     def __init__(self):
         print("class initialized");
-        
+
     def printingHellow(self):
         "heasdfsdf"
 
@@ -37,16 +37,15 @@ class loaddata:
     def read_csv_or_text(self,path):
         self.data_frame = pd.read_csv(path) #reading  csv data
         return self.data_frame #return data frame of csv file
-        
+
     def reading_excel_xls(self,path):
         import xlrd
         workbook = xlrd.open_workbook(path)
         worksheet = workbook.sheet_by_index(0)  # 1st sheet value
-        #a = worksheet.cell(2,9).value value for specifi field
-        data = [[worksheet.cell_value(r,c) for c in range (worksheet.ncols)] for r in range(worksheet.nrows)]
-        data = pd.DataFrame(data)        
+        data = [[worksheet.cell_value(r, c) for c in range(worksheet.ncols)] for r in range(worksheet.nrows)]
+        data = pd.DataFrame(data)
         return data
-        
+
     def reading_json(self):
         #import urllib2
         import json

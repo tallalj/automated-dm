@@ -8,12 +8,13 @@ import copy
 import math
 import random
 import matplotlib.pyplot as plt
+from DataManager.savedata import savedata
 
 from GetData import GetData
 from AndlizeData import AndlizeData
 from Outlier import Outlier
 
-dataset="";
+dataset = "";
 
 def get_File(self):
     Data=GetData()
@@ -31,9 +32,14 @@ def start_analize(self):
 def clear_table(self):
     return
 
+# Export logic
+def selectionchange(self):
+    " asdasd"
+
 def exportButtonPressed(self):
     print(GetData.filePath)
-    QMessageBox.warning(window, "Sorry", "Pay to play :D ?")
+
+    savedata().writeCSV(GetData.dataFrame)
 
 app = QtGui.QApplication(sys.argv)
 window = uic.loadUi("mainview.ui")

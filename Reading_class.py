@@ -29,6 +29,7 @@ class read_file:
     def read_csv_or_text(self):
         self.data_frame = pd.read_csv(self.file_path) #reading  csv data
         return self.data_frame #return data frame of csv file
+
     def reading_excel_xls(self):
         import xlrd
         workbook = xlrd.open_workbook(self.file_path)
@@ -37,6 +38,7 @@ class read_file:
         data = [[worksheet.cell_value(r,c) for c in range (worksheet.ncols)] for r in range(worksheet.nrows)]
         data = pd.DataFrame(data)        
         return data
+
     def reading_json(self):
         #import urllib2
         import json

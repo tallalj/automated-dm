@@ -13,6 +13,7 @@ from DataManager.loaddata import loaddata
 
 class GetData(QtGui.QFileDialog):
     filePath = ""
+    dataFrame = ""
     def get_File(self,window):
         """Gets the path of the file selected via file picker"""
         DataSetPath = self.getOpenFileName(self,'Open file','c:\\',"dataFile (*.*)")
@@ -21,5 +22,6 @@ class GetData(QtGui.QFileDialog):
         #RowData=pd.read_csv(DataSetPath,low_memory=False)
         ld = loaddata()
         RowData = ld.read_file_at_path(DataSetPath)
+        GetData.dataFrame = RowData
         print("read the file")
         return RowData
