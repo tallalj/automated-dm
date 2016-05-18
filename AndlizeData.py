@@ -8,7 +8,12 @@ import copy
 import math
 import random
 import matplotlib.pyplot as plt
+import matplotlib.pyplot as plot2
+
 from matplotlib.backends.backend_qt4agg import FigureCanvasQTAgg as FigureCanvas
+
+
+
 class AndlizeData:
  def start(self,dataset,window):
   window.ColDetail.setRowCount(len(dataset.columns));
@@ -17,30 +22,39 @@ class AndlizeData:
    Col2_ColName=dataset.columns[count]
    cell=dataset[dataset.columns[count]]
    Col3_type=cell.dtype.name
-   print(cell.dtype)
    Col4_na=self.Find_Missing_values(cell)
    Col5_var=len(cell.unique())
    if Col3_type!='object':
+    #------------------------------------------------------------------------------------------------
     plt.boxplot(cell)
+    boxplot = plt.gcf()
+    boxplot.savefig('boxplot.png', dpi=100)
+    pixmaxboxplot=QtGui.QPixmap('boxplot.png')
+    pixmaxboxplot=pixmaxboxplot.scaled(531, 361)
 
-    figure=plt.figure()
-    canv = FigureCanvas(figure)
-    hBoxLayout	 = QHBoxLayout()
-    hBoxLayout.setObjectName("boxImage")
-    hBoxLayout.setGeometry(QRect(100, 100, 100, 100))
-    hBoxLayout.addWidget(canv)
+    window.plot.setPixmap(pixmaxboxplot)
+    plt.close(boxplot)
+   #------------------------------------------------------------------------------------------------
 
-    window.plot.setLayout(hBoxLayout)
-    print("************************")
-    print(type(figure))
+    plt.scatter(cell.index, cell)
+    figure_scatter2 = plt.gcf()
+    figure_scatter2.savefig('figure_scatter.png', dpi=100)
+    pixmax=QtGui.QPixmap('figure_scatter.png')
+    pixmax=pixmax.scaled(681, 471)
+    window.visulization.setPixmap(pixmax)
 
-    #window.plot.setPixmap(figure)
-   print(Col1_Number,Col2_ColName,Col3_type,Col4_na,Col5_var)
+   #------------------------------------------------------------------------------------------------
+
    item1 = QTableWidgetItem(str(Col1_Number))
    item2 = QTableWidgetItem(str(Col2_ColName))
    item3 = QTableWidgetItem(str(Col3_type))
    item4 = QTableWidgetItem(str(Col4_na))
    item5 = QTableWidgetItem(str(Col5_var))
+   item1.setFlags(QtCore.Qt.ItemIsEnabled )
+   item2.setFlags(QtCore.Qt.ItemIsEnabled )
+   item3.setFlags(QtCore.Qt.ItemIsEnabled )
+   item4.setFlags(QtCore.Qt.ItemIsEnabled )
+   item5.setFlags(QtCore.Qt.ItemIsEnabled )
 
    window.ColDetail.setItem(count,0,item1)
    window.ColDetail.setItem(count,1,item2)
@@ -48,6 +62,29 @@ class AndlizeData:
    window.ColDetail.setItem(count,3,item4)
    window.ColDetail.setItem(count,4,item5)
 
+
+  return
+ def selected(self,dataset,window,row):
+  window.ColDetail.setRowCount(len(dataset.columns));
+  cell=dataset[dataset.columns[row]]
+  Ctype=cell.dtype.name
+  if Ctype!='object':
+   #------------------------------------------------------------------------------------------------
+   plt.boxplot(cell)
+   boxplot = plt.gcf()
+   boxplot.savefig('boxplot.png', dpi=100)
+   pixmaxboxplot=QtGui.QPixmap('boxplot.png')
+   pixmaxboxplot=pixmaxboxplot.scaled(531, 361)
+   window.plot.setPixmap(pixmaxboxplot)
+   plt.close(boxplot)
+   #------------------------------------------------------------------------------------------------
+   plt.scatter(cell.index, cell)
+   figure_scatter2 = plt.gcf()
+   figure_scatter2.savefig('figure_scatter.png', dpi=100)
+   pixmax=QtGui.QPixmap('figure_scatter.png')
+   pixmax=pixmax.scaled(681, 471)
+   window.visulization.setPixmap(pixmax)
+  #------------------------------------------------------------------------------------------------
 
   return
  def Find_Missing_values(self,DataCol):

@@ -16,6 +16,6 @@ class Outlier:
  def start(self,dataset,window):
   for count in range(0, len(dataset.columns)):
    cell=dataset[dataset.columns[count]]
-   print("---------------------------------")
    print(len(cell))
   return
+

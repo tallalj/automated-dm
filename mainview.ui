@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>1345</width>
-    <height>756</height>
+    <height>686</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -89,7 +89,7 @@ p, li { white-space: pre-wrap; }
     <property name="geometry">
      <rect>
       <x>560</x>
-      <y>130</y>
+      <y>80</y>
       <width>75</width>
       <height>23</height>
      </rect>
@@ -102,7 +102,7 @@ p, li { white-space: pre-wrap; }
     <property name="geometry">
      <rect>
       <x>560</x>
-      <y>160</y>
+      <y>110</y>
       <width>75</width>
       <height>23</height>
      </rect>
@@ -147,46 +147,75 @@ p, li { white-space: pre-wrap; }
      </property>
     </widget>
    </widget>
-   <widget class="QFrame" name="plot">
+   <widget class="QLabel" name="plot">
     <property name="geometry">
      <rect>
-      <x>640</x>
-      <y>10</y>
-      <width>701</width>
-      <height>481</height>
+      <x>20</x>
+      <y>300</y>
+      <width>531</width>
+      <height>361</height>
      </rect>
     </property>
-    <property name="frameShape">
-     <enum>QFrame::StyledPanel</enum>
+    <property name="text">
+     <string/>
     </property>
-    <property name="frameShadow">
-     <enum>QFrame::Raised</enum>
+    <property name="pixmap">
+     <pixmap>C:/Users/ello/Downloads/Untitled.png</pixmap>
+    </property>
+   </widget>
+   <widget class="QLabel" name="visulization">
+    <property name="geometry">
+     <rect>
+      <x>650</x>
+      <y>20</y>
+      <width>681</width>
+      <height>471</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap>C:/Users/ello/Downloads/Untitled.png</pixmap>
     </property>
    </widget>
    <widget class="QLabel" name="label">
     <property name="geometry">
      <rect>
       <x>20</x>
-      <y>10</y>
-      <width>181</width>
+      <y>280</y>
+      <width>47</width>
+      <height>13</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Box Plot</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>650</x>
+      <y>0</y>
+      <width>91</width>
       <height>16</height>
      </rect>
     </property>
     <property name="text">
-     <string>TABISH MANZOOR</string>
+     <string>scatter plot</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="exportButton">
+   <widget class="QLabel" name="label_3">
     <property name="geometry">
      <rect>
-      <x>1260</x>
-      <y>690</y>
-      <width>75</width>
-      <height>23</height>
+      <x>20</x>
+      <y>0</y>
+      <width>47</width>
+      <height>13</height>
      </rect>
     </property>
     <property name="text">
-     <string>Export</string>
+     <string>Load Path</string>
     </property>
    </widget>
   </widget>
