@@ -62,6 +62,6 @@ class loaddata:
 
     def read_html(self):
         #import html5lib   #'''pip install pandas pip install lxml pip install html5lib pip install BeautifulSoup4
-        url = 'http://www.fdic.gov/bank/individual/failed/banklist.html'
-        data = pd.read_html(url)
+        #url = 'http://www.fdic.gov/bank/individual/failed/banklist.html'
+        data = pd.read_html(self.file_path)
         print(data)
