@@ -12,7 +12,7 @@ import matplotlib.pyplot as plt
 from GetData import GetData
 from AndlizeData import AndlizeData
 from Outlier import Outlier
-
+from PreProcessing.sanitizor import sanitizor
 dataset="";
 
 
@@ -28,14 +28,23 @@ def start_analize(self):
  global outliers_processor
  Obj_analize.start(dataset,window)
  outliers_processor.start(dataset,window)
-
+ Obj_sanitizor=sanitizor()
+ result = Obj_sanitizor.analyze_df(dataset);
+ window.dataframesummery.setText(result)
 def clear_table(self):
  global Obj_analize
- Obj_analize.selected(dataset,window,3)
+ #Obj_analize.selected(dataset,window,3)
+
  return
 def cell(row, column):
+    global dataset
+    global window
     print("Row %d and Column %d was clicked" % (row, column))
     Obj_analize.selected(dataset,window,row)
+    Obj_sanitizor=sanitizor()
+    result = Obj_sanitizor.analyze_col(dataset.ix[:,row]);
+    window.cellsummery.setText(result)
+    cellsummery
 app = QtGui.QApplication(sys.argv)
 window = uic.loadUi("mainview.ui")
 

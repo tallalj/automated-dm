@@ -126,22 +126,22 @@ p, li { white-space: pre-wrap; }
     <property name="frameShadow">
      <enum>QFrame::Raised</enum>
     </property>
-    <widget class="QTextEdit" name="numberSummery">
+    <widget class="QTextEdit" name="dataframesummery">
      <property name="geometry">
       <rect>
-       <x>10</x>
+       <x>9</x>
        <y>10</y>
-       <width>511</width>
+       <width>331</width>
        <height>111</height>
       </rect>
      </property>
     </widget>
-    <widget class="QTextEdit" name="Detail">
+    <widget class="QTextEdit" name="cellsummery">
      <property name="geometry">
       <rect>
-       <x>530</x>
+       <x>360</x>
        <y>10</y>
-       <width>161</width>
+       <width>340</width>
        <height>111</height>
       </rect>
      </property>
