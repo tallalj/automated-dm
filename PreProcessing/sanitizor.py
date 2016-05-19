@@ -36,7 +36,7 @@ class sanitizor:
        c = df.isnull().sum()
        return c
 
-    def count_nan_col_total(df):
+    def count_nan_col_total(self,df):
        c = df.isnull().sum().sum()
        return c
        
@@ -51,7 +51,7 @@ class sanitizor:
         return data[s<m]
         
 
-    def remove_non_numeric(d):
+    def remove_non_numeric(self,d):
         dt = d
         for col in d:
             if  d.ix[:,col].dtype != np.float32 and d.ix[:,col].dtype != np.float64 and d.ix[:,col].dtype != np.int64:
@@ -61,54 +61,54 @@ class sanitizor:
         return dt
 
 
-    def is_non_numeric(d):
+    def is_non_numeric(self,d):
         if  d.dtype != np.float32 and d.dtype != np.float64 and d.dtype != np.int64:
             return False
         else:
             return True
 
 
-    def reject_outliers1(data):
+    def reject_outliers1(self,data):
         m = 1.5
         u = np.mean(data)
         s = np.std(data)
         filtered = [e for e in data if (u - 1.5 * s < e < u + 1.5 * s)]
         return filtered
         
-    def remove_nan_by_mean(d_f):
+    def remove_nan_by_mean(self,d_f):
         data = d_f.fillna(d_f.mean())    
         return data
         
-    def describe_col(col):
+    def describe_col(self,col):
         return col.describe()
 
-    def info_df(d):
+    def info_df(self,d):
         return d.info()
 
-    def describe_df(d):
+    def describe_df(self,d):
         return d.describe()
 
-    def get_cov(d):
+    def get_cove(self,d):
         c = np.cov(d, rowvar=False)
         return c
 
-    def get_var(d):
+    def get_vare(self,d):
         c = np.var(d)
         return c
         
         
-    def count_outliers(col):
+    def count_outliers(self,col):
         old = col
         new = col
         if col.dtype != np.float32 and col.dtype != np.float64 and col.dtype != np.int64:
             return 0
         else:
-            new = reject_outliers1(col)
+            new = self.reject_outliers1(col)
             return len(old)-len(new)
             
 
 
-    print(count_outliers(df.ix[:,9]))        
+    #print(count_outliers(df.ix[:,9]))
             
 
     #def get_mean(d):
@@ -131,14 +131,14 @@ class sanitizor:
 
 
     #Analyze complete df
-    def analyze_df(df):
+    def analyze_df(self,df):
         desc = df.describe()
         info = df.info()
-        d = remove_non_numeric(df)
-        m = remove_nan_by_mean(d)
-        co = get_cov(m)
-        va = get_var(m)
-        nan = count_nan_col_total(df)
+        d = self.remove_non_numeric(df)
+        m = self.remove_nan_by_mean(d)
+        co = self.get_cove(m)
+        va = self.get_vare(m)
+        nan = self.count_nan_col_total(df)
         return("\n\nSummary statistics\n"+str(desc)+
         "\n\nInfo\n"+str(info)+
         "\n\nCovarience Matrix\n"+str(co)+
@@ -151,9 +151,9 @@ class sanitizor:
 
     
     #Analyze single col    
-    def analyze_col(col):
+    def analyze_col(self,col):
         des = col.describe()
-        out = count_outliers(col)
+        out = self.count_outliers(col)
         return("\n\nSummary statistics\n"+str(des)+
         "\n\nOutliers\n"+str(out))
         
