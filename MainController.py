@@ -12,7 +12,8 @@ import matplotlib.pyplot as plt
 from GetData import GetData
 from AndlizeData import AndlizeData
 from Outlier import Outlier
-from PreProcessing.sanitizor import sanitizor
+import sys
+from DataManager.savedata import savedata
 dataset="";
 
 
@@ -28,34 +29,61 @@ def start_analize(self):
  global outliers_processor
  Obj_analize.start(dataset,window)
  outliers_processor.start(dataset,window)
- Obj_sanitizor=sanitizor()
- result = Obj_sanitizor.analyze_df(dataset);
- window.dataframesummery.setText(result)
+
 def clear_table(self):
  global Obj_analize
- #Obj_analize.selected(dataset,window,3)
-
+ Obj_analize.selected(dataset,window,3)
  return
 def cell(row, column):
-    global dataset
-    global window
     print("Row %d and Column %d was clicked" % (row, column))
     Obj_analize.selected(dataset,window,row)
-    Obj_sanitizor=sanitizor()
-    result = Obj_sanitizor.analyze_col(dataset.ix[:,row]);
-    window.cellsummery.setText(result)
-    cellsummery
+
+def Exit(self):
+    sys.exit()
+def Aboutus():
+   msg = QMessageBox()
+   msg.setIcon(QMessageBox.Information)
+
+   msg.setText("Design by ITU")
+   msg.setInformativeText("")
+   msg.setWindowTitle("About Us")
+   msg.setDetailedText("Tabish Manzoor\nTallal Javed\nMubashir imran\nTaila Jabeen")
+   msg.setStandardButtons(QMessageBox.Ok)
+
+   retval = msg.exec_()
 app = QtGui.QApplication(sys.argv)
 window = uic.loadUi("mainview.ui")
-
 window.show()
+#/--------------------------------------------- Menu Controll  -----------------------------------------/
+def Json(self):
+    sv = savedata()
+    sv.writeJSON(dataset)
+
+def XML(self):
+    print("work in progress")
+def CSV(self):
+    sv = savedata()
+    sv.writeCSV(dataset)
+
+#/--------------------------------------------- Menu Controll  -----------------------------------------/
 
 
 Obj_analize=AndlizeData()
 outliers_processor=Outlier()
-window.Datapathbutton.clicked.connect(get_File)
+window.edDatapathbutton.clicked.connect(get_File)
 window.analize.clicked.connect(start_analize)
 window.clear.clicked.connect(clear_table)
 window.ColDetail.cellClicked.connect(cell)
+
+
+window.actionOpen.triggered.connect(get_File)
+window.actionExit.triggered.connect(Exit)
+
+window.actionAbout_help.triggered.connect(Aboutus)
+
+window.actionJSon.triggered.connect(Json)
+window.actionXML.triggered.connect(XML)
+window.actionCSV.triggered.connect(CSV)
+
 
 sys.exit(app.exec_())
